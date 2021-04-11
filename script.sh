@@ -1,6 +1,6 @@
 az group create \
 --name RG-19-ASR \
---location westeurope
+--location eastus2
 
 az network vnet create \
   --resource-group RG-19-ASR \
@@ -60,4 +60,4 @@ az vm extension set \
   --name CustomScript \
   --vm-name VM-01 \
   --resource-group RG-19-ASR \
-  --settings '{"commandToExecute":"apt-get -y update && apt-get -y install apache2 && echo Web Server in Main Region - West Europe - VM-01 > /var/www/html/index.html"}'
+  --settings '{"commandToExecute":"apt-get -y update && apt-get -y install apache2 && echo Web Server in Main Region - East US2 - VM-01 > /var/www/html/index.html"}'
